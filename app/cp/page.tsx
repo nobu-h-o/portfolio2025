@@ -12,6 +12,7 @@ export default function Page() {
             <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 Here are some links to my CP accounts
             </p>
+            <br/>
             <a
                 className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
                 rel="noopener noreferrer"
