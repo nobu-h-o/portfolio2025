@@ -8,7 +8,7 @@ export const metadata = {
 export default function Page() {
     return (
         <section>
-            <h1 className="font-semibold text-2xl mb-4 tracking-tighter">Competitive Programming</h1>
+            <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Competitive Programming</h1>
             <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 Here are some links to my CP accounts
             </p>
