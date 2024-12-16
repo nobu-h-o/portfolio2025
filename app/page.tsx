@@ -11,7 +11,7 @@ export default function Page() {
         my passion for web development.
       </p>
       <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-      Currently focused on Frontend web development, but open to learning ANYTHING
+      Currently focused on Web Development, but open to learning ANYTHING
       and EVERYTHING software engineering related.
       </p>
       <div className="my-8">
