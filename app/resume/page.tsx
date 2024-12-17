@@ -1,5 +1,8 @@
 import ArrowIcon from "../components/ArrowIcon";
-
+export const metadata = {
+    title: 'Resume',
+    description: 'Here is my resume',
+}
 export default function page(){
     return (
 

@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'Work Experience',
+    title: 'Experience',
     description: 'Here are some places I have worked for',
 }
 
