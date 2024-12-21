@@ -98,11 +98,21 @@ export default function Page() {
                 className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
                 rel="noopener noreferrer"
                 target="_blank"
+                href="https://codeforces.com/profile/notoh"
+            >
+                <ArrowIcon/>
+                <p className="ml-2 h-7">Codeforces</p>
+            </a>
+            <a
+                className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+                rel="noopener noreferrer"
+                target="_blank"
                 href="https://leetcode.com/u/notoh-/"
             >
                 <ArrowIcon/>
                 <p className="ml-2 h-7">LeetCode</p>
             </a>
+            
         </section>
     )
 }
