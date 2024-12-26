@@ -12,7 +12,7 @@ export default function Page() {
                     Nov, 2024 - Current
                 </p>
                 <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                    Frontend Intern at NAXA co.
+                    Software Engineering Intern at NAXA co.
                 </p>
             </div>
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
