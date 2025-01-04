@@ -32,7 +32,7 @@ export default function Page() {
             >
                 <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                     <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                        AtCoder Rating Comparer - Used Web Scraping Technology to create a Web Application to compare ratings on AtCoder, a competitive programming platform. 
+                        AtCoder Rating Comparer - Used Web Scraping Technology to create a Web Application to compare ratings on AtCoder. 
                         Used over 2000 times and featured on AtCoder Clans; an unofficial blog for AtCoder
                     </p>
                 </div>
