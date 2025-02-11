@@ -1,5 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
-import {formatDate} from "../blog/utils";
+import {formatDate} from "../about/utils";
 import Link from "next/link";
 import ArrowIcon from "../components/ArrowIcon";
 
