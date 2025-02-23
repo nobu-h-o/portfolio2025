@@ -1,4 +1,4 @@
-import { baseUrl } from 'app/layout'
+import { baseUrl } from './routes'
 
 export default function robots() {
   return {
