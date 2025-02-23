@@ -1,6 +1,4 @@
-import { BlogPosts } from 'app/components/posts'
 import Link from "next/link";
-import ArrowIcon from "../components/ArrowIcon";
 
 export const metadata = {
     title: 'Projects',
