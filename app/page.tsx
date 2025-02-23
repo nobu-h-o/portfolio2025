@@ -1,3 +1,5 @@
+import ArrowIcon from "./components/ArrowIcon";
+
 export default function Page() {
   return (
     <section>
@@ -14,6 +16,7 @@ export default function Page() {
       Currently focused on Web Development, but open to learning ANYTHING
       and EVERYTHING software engineering related.
       </p>
+
       <div className="my-8">
           <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
               <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
@@ -24,6 +27,17 @@ export default function Page() {
               </p>
           </div>
       </div>
+      
+      <a
+        className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100 mt-8"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="/Resume.pdf"
+      >
+        <ArrowIcon/>
+        <p className="ml-2 h-7">Click here for my resume</p>
+      </a>
+
     </section>
   )
 }

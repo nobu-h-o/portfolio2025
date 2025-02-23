@@ -1,5 +1,4 @@
 import { BlogPosts } from 'app/components/posts'
-import {formatDate} from "../about/utils";
 import Link from "next/link";
 import ArrowIcon from "../components/ArrowIcon";
 
@@ -92,39 +91,6 @@ export default function Page() {
                     </p>
                 </div>
             </Link>
-            <h1 className="font-semibold text-2xl my-8 tracking-tighter">Competitive Programming</h1>
-            <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                Here are some links to my CP accounts
-            </p>
-            <br/>
-            <a
-                className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://atcoder.jp/users/notoh"
-            >
-                <ArrowIcon/>
-                <p className="ml-2 h-7">AtCoder</p>
-            </a>
-            <a
-                className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://codeforces.com/profile/notoh"
-            >
-                <ArrowIcon/>
-                <p className="ml-2 h-7">Codeforces</p>
-            </a>
-            <a
-                className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://leetcode.com/u/notoh-/"
-            >
-                <ArrowIcon/>
-                <p className="ml-2 h-7">LeetCode</p>
-            </a>
-            
         </section>
     )
 }
