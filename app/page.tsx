@@ -8,7 +8,7 @@ export default function Page() {
       </h1>
       <p className="mb-4 text-neutral-900 dark:text-neutral-100 tracking-tight">
         Fully committed to the philosophy of life-long learning
-        with a deep passion for building working software.
+        with a deep passion for building software.
         The unique combination of creativity and technology drives 
         my passion for web development.
       </p>

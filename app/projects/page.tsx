@@ -11,14 +11,14 @@ export default function Page() {
             <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Projects</h1>
             <Link
                 className="flex flex-col space-y-1 mb-4"
-                href='https://github.com/nobu-h-o/MyJapan'
+                href='https://github.com/nobu-h-o/Calendxr'
                 target="_blank"
             >
                 <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                     <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                        MyJapan - Worked in a team of 4 for a hackathon and developed 
-                        a web application that comes up with personalized travel plans for tourists,
-                        based on their preferences and personality
+                        Calendxr - Worked in a team of 6 for a hackathon and developed 
+                        a Web Application Calendar with AI assistant and event creation from image recognition. Finalist (Top 10 out of 48 teams)
+                        and won the Loglass Award
                     </p>
                 </div>
             </Link>
@@ -29,7 +29,21 @@ export default function Page() {
             >
                 <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                     <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                        AtCoder Rating Comparer - Used Web Scraping Technology to create a Web Application to compare ratings on AtCoder. 
+                        AtCoder Rating Comparer - Used Web Scraping Technology to create a Web Application to compare ratings on AtCoder. Used over 5000
+                        times and featured on AtCoder Clans
+                    </p>
+                </div>
+            </Link>
+            <Link
+                className="flex flex-col space-y-1 mb-4"
+                href='https://github.com/nobu-h-o/MyJapan'
+                target="_blank"
+            >
+                <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+                    <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                        MyJapan - Worked in a team of 4 for a hackathon and developed 
+                        a Web Application that comes up with personalized travel plans for tourists,
+                        based on their preferences and personality
                     </p>
                 </div>
             </Link>
