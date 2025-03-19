@@ -9,6 +9,14 @@ export default function Page() {
             <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Work Experience</h1>
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
                 <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
+                    Mar, 2025 - Current
+                </p>
+                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                    Software Engineering Intern at ExaWizards Inc.
+                </p>
+            </div>
+            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+                <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
                     Nov, 2024 - Current
                 </p>
                 <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
