@@ -18,7 +18,7 @@ export default function Page() {
                     <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                         Calendxr - Worked in a team of 6 for a hackathon and developed 
                         a Web Application Calendar with AI assistant and event creation from image recognition. Finalist (Top 10 out of 48 teams)
-                        and won the Loglass Award
+                        and won the Loglass Award at Engineering Guild Hackathon 2025
                     </p>
                 </div>
             </Link>
