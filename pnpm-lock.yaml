@@ -39,7 +39,7 @@ importers:
         specifier: ^4.95.1
         version: 4.95.1
       postcss:
-        specifier: ^8.4.35
+        specifier: ^8.5.3
         version: 8.5.3
       react:
         specifier: 18.2.0
