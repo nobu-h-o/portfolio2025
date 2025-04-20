@@ -10,6 +10,9 @@ const navItems = {
   '/cp': {
     name: 'cp',
   },
+  '/chat': {
+    name: 'chat',
+  },
 }
 
 export function Navbar() {
