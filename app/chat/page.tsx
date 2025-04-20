@@ -46,14 +46,6 @@ export default function ChatbotPage() {
     }
   }, [isLoading]);
 
-  const scrollToBottom = () => {
-    const messageElements = document.querySelectorAll('.message-container');
-    if (messageElements.length > 0) {
-      const lastMessage = messageElements[messageElements.length - 1];
-      lastMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim() === '') return;
