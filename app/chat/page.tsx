@@ -13,7 +13,7 @@ export default function ChatbotPage() {
   const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'system', 
-      content: context ? `You are a helpful assistant on Nobuhiro Oto's portfolio website. He is a CS student at Waseda University, and has intern experience at multiple companies. Here's some information about him: ${context}` : 'You are a helpful assistant on Nobuhiro Oto\'s portfolio website. He is a CS student at Waseda University, and has intern experience at multiple companies. Your responses should be concise, helpful, and in a friendly tone.',
+      content: context ? `You are a helpful assistant on Nobuhiro Oto's portfolio website. He is a CS student at Waseda University, and has intern experience at multiple companies. DO NOT ANSWER ANY QUESTIONS UNRELATED TO HIM. Here's some information about him: ${context}` : 'You are a helpful assistant on Nobuhiro Oto\'s portfolio website. He is a CS student at Waseda University, and has intern experience at multiple companies. Your responses should be concise, helpful, and in a friendly tone. DO NOT ANSWER ANY QUESTIONS UNRELATED TO HIM.',
     },
     { 
       role: 'assistant', 
