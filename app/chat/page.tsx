@@ -28,7 +28,11 @@ export default function ChatbotPage() {
 
   useEffect(() => {
     if (messages.length > initialMessagesLength.current) {
-      scrollToBottom();
+      const messageElements = document.querySelectorAll('.message-container');
+      if (messageElements.length > 0) {
+        const lastMessage = messageElements[messageElements.length - 1];
+        lastMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }, [messages]);
 
@@ -41,10 +45,6 @@ export default function ChatbotPage() {
       return () => clearTimeout(timer);
     }
   }, [isLoading]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,7 +97,7 @@ export default function ChatbotPage() {
             message.role !== 'system' && (
               <div 
                 key={index} 
-                className={`mb-4 ${message.role === 'user' ? 'text-right' : 'text-left'}`}
+                className={`mb-4 message-container ${message.role === 'user' ? 'text-right' : 'text-left'}`}
               >
                 <div 
                   className={`inline-block p-3 rounded-lg max-w-[80%] whitespace-pre-wrap ${
