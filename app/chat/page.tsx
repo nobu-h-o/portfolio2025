@@ -24,9 +24,12 @@ export default function ChatbotPage() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const initialMessagesLength = useRef(messages.length);
 
   useEffect(() => {
-    scrollToBottom();
+    if (messages.length > initialMessagesLength.current) {
+      scrollToBottom();
+    }
   }, [messages]);
 
   // Add effect to maintain focus
