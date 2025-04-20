@@ -1,37 +1,36 @@
-name: Chatbot Update
+name: Next.js CI/CD
 
 on:
-  workflow_dispatch:
-    inputs:
-      context:
-        description: 'Context for the chatbot'
-        required: true
-        type: string
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  update-chatbot:
+  build:
     runs-on: ubuntu-latest
-    
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    defaults:
+      run:
+        working-directory: ./
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '23'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          NEXT_PUBLIC_CHAT_CONTEXT: ${{ github.event.inputs.context }}
-        run: |
-          npm run build
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add .
-          git commit -m "Update chatbot context"
-          git push 
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: './package-lock.json'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build
+      run: npm run build 
