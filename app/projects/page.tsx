@@ -36,6 +36,28 @@ export default function Page() {
             </Link>
             <Link
                 className="flex flex-col space-y-1 mb-4"
+                href='https://github.com/nobu-h-o/toy-browser'
+                target="_blank"
+            >
+                <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+                    <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                        toy-browser - A toy browser built in Rust, based on sababook by d0iasm
+                    </p>
+                </div>
+            </Link>
+            <Link
+                className="flex flex-col space-y-1 mb-4"
+                href='https://github.com/nobu-h-o/1cc'
+                target="_blank"
+            >
+                <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
+                    <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                        1cc - A toy compiler written in C
+                    </p>
+                </div>
+            </Link>
+            <Link
+                className="flex flex-col space-y-1 mb-4"
                 href='https://github.com/nobu-h-o/MyJapan'
                 target="_blank"
             >
