@@ -24,14 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Update environment variables
-        run: |
-          echo "NEXT_PUBLIC_CHAT_CONTEXT=${{ github.event.inputs.context }}" >> .env.local
-          echo "NEXT_PUBLIC_CHAT_CONTEXT=${{ github.event.inputs.context }}" >> .env.production
-          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env.local
-          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env.production
-
-      - name: Build and deploy
+      - name: Build
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NEXT_PUBLIC_CHAT_CONTEXT: ${{ github.event.inputs.context }}
         run: |
           npm run build
           git config --global user.name 'GitHub Actions'
