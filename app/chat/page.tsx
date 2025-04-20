@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 type Message = {
   role: 'user' | 'assistant' | 'system';
@@ -16,16 +17,27 @@ export default function ChatbotPage() {
     },
     { 
       role: 'assistant', 
-      content: 'Hi there! I\'m Nobu\'s AI assistant. I have access to his tweets and resume. Feel free to ask me any questions!日本語でも大丈夫です！' 
+      content: 'Hi there! I\'m Nobuhiro\'s AI assistant. I have access to his tweets and resume. Feel free to ask me any questions!\n(I was last updated on April 2025)'
     }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Add effect to maintain focus
+  useEffect(() => {
+    if (!isLoading) {
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 0);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -85,13 +97,17 @@ export default function ChatbotPage() {
                 className={`mb-4 ${message.role === 'user' ? 'text-right' : 'text-left'}`}
               >
                 <div 
-                  className={`inline-block p-3 rounded-lg max-w-[80%] ${
+                  className={`inline-block p-3 rounded-lg max-w-[80%] whitespace-pre-wrap ${
                     message.role === 'user' 
                       ? 'bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100'
                       : 'bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 border border-neutral-200 dark:border-neutral-700'
                   }`}
                 >
-                  {message.content}
+                  {message.role === 'assistant' ? (
+                    <ReactMarkdown>{message.content}</ReactMarkdown>
+                  ) : (
+                    message.content
+                  )}
                 </div>
               </div>
             )
@@ -112,11 +128,12 @@ export default function ChatbotPage() {
 
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type your message..."
-            className="flex-1 p-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-500"
+            className="flex-1 p-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-black text-neutral-900 dark:text-neutral-100 focus:outline-none"
             disabled={isLoading}
           />
           <button
