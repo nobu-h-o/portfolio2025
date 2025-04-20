@@ -40,7 +40,7 @@ export default function Page() {
                     Apr, 2023 - Current
                 </p>
                 <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                    Pursuing a Bachelor's in Computer Science at Waseda University
+                    Pursuing a Bachelor&rsquo;s in Computer Science at Waseda University
                 </p>
             </div>
             <a
