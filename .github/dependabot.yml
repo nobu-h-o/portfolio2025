@@ -16,6 +16,6 @@ updates:
       prefix: "npm"
       include: "scope"
     reviewers:
-      - "notoh"
+      - "nobu-h-o"
     assignees:
-      - "notoh"
+      - "nobu-h-o"
